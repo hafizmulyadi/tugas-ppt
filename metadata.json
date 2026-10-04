@@ -1,0 +1,6 @@
+{
+  "name": "Mindloop — Usability & Content Platform",
+  "description": "A dark monochrome publication and platform exploring Usability Engineering, cognitive ergonomics, and digital clarity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
