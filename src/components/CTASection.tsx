@@ -31,10 +31,12 @@ export function CTASection() {
         <motion.h2
           {...fadeUp(0.1)}
           className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-6 leading-[1.08]"
-          style={{ textWrap: 'balance' }}
+          style={{ textWrap: "balance" }}
         >
-          Terapkan Prinsip{' '}
-          <span className="font-serif italic font-normal text-white">Usability</span>
+          Sekian dan{" "}
+          <span className="font-serif italic font-normal text-white">
+            Terima Kasih
+          </span>
         </motion.h2>
 
         {/* Subtitle */}
@@ -42,7 +44,7 @@ export function CTASection() {
           {...fadeUp(0.3)}
           className="text-neutral-400 text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-normal"
         >
-          Rancang sistem digital yang memiliki kegunaan tinggi. Terapkan 5 atribut Jakob Nielsen, jalankan pengujian formatif, ukur dengan metrik SUS, dan ikuti siklus hidup usability secara menyeluruh.
+          Sekian Materi dari kami, jika ada salah kata mohon dimaafkan.
         </motion.p>
 
         {/* Action buttons */}
@@ -51,7 +53,7 @@ export function CTASection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md"
         >
           <motion.button
-            onClick={() => scrollTo('metode-pengukuran')}
+            onClick={() => scrollTo("metode-pengukuran")}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
             className="w-full sm:w-auto bg-white text-black font-semibold text-sm rounded-lg px-8 py-3.5 tracking-wide transition-shadow hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] whitespace-nowrap flex items-center justify-center gap-2"
@@ -61,7 +63,7 @@ export function CTASection() {
           </motion.button>
 
           <motion.button
-            onClick={() => scrollTo('pentingnya-usability')}
+            onClick={() => scrollTo("pentingnya-usability")}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
             className="w-full sm:w-auto liquid-glass text-white font-medium text-sm rounded-lg px-8 py-3.5 border border-white/20 hover:border-white/40 transition-colors whitespace-nowrap flex items-center justify-center gap-2"
@@ -76,7 +78,7 @@ export function CTASection() {
           {...fadeUp(0.5)}
           className="text-xs text-neutral-400 mt-10 tracking-widest font-mono uppercase"
         >
-          STANDAR ISO 9241-11 · JAKOB NIELSEN 1993 · DEBORAH MAYHEW 1999
+          HAMDI RAHMAN . HAFIZ MULYADI . Hanifah Mardhiyah Rahamdhani
         </motion.p>
       </div>
     </section>

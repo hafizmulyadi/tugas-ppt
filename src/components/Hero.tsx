@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion';
-import { ASSETS } from '../assets';
-import { fadeUp } from '../lib/utils';
-import { ArrowDown, CheckCircle2 } from 'lucide-react';
+import { motion } from "framer-motion";
+import { ASSETS } from "../assets";
+import { fadeUp } from "../lib/utils";
+import { ArrowDown, CheckCircle2 } from "lucide-react";
 
 export function Hero() {
   const quickLinks = [
-    { label: 'Pentingnya Usability', href: '#pentingnya-usability' },
-    { label: '5 Atribut Kualitas', href: '#atribut-usability' },
-    { label: 'Langkah Perancangan', href: '#langkah-usability' },
-    { label: 'Metode Pengukuran', href: '#metode-pengukuran' },
-    { label: 'Siklus Hidup', href: '#siklus-hidup' },
+    { label: "Pentingnya Usability", href: "#pentingnya-usability" },
+    { label: "5 Atribut Kualitas", href: "#atribut-usability" },
+    { label: "Langkah Perancangan", href: "#langkah-usability" },
+    { label: "Metode Pengukuran", href: "#metode-pengukuran" },
+    { label: "Siklus Hidup", href: "#siklus-hidup" },
   ];
 
   return (
@@ -64,9 +64,11 @@ export function Hero() {
         <motion.h1
           {...fadeUp(0.2)}
           className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-[-2px] text-white leading-[1.08] max-w-4xl"
-          style={{ textWrap: 'balance' }}
+          style={{ textWrap: "balance" }}
         >
-          <span className="font-serif italic font-normal text-white">Usability</span>
+          <span className="font-serif italic font-normal text-white">
+            Usability
+          </span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -74,7 +76,9 @@ export function Hero() {
           {...fadeUp(0.3)}
           className="text-base md:text-lg text-[hsl(var(--hero-subtitle))] max-w-3xl mx-auto mt-6 mb-10 leading-relaxed font-normal"
         >
-          Kuasai fondasi perancangan sistem berpusat pada manusia: telaah pentingnya usability, 5 atribut usability, langkah-langkah usability, metode pengukuran rekayasa usability kuantitatif &amp; kualitatif, serta siklus hidup usability.
+          Memahami bagaimana merancang sistem yang mudah digunakan, efektif,
+          efisien, dan nyaman bagi pengguna melalui prinsip, metode pengukuran,
+          serta proses evaluasi usability
         </motion.p>
 
         {/* Quick Jump Buttons to Usability Sections */}

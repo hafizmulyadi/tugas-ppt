@@ -1,14 +1,26 @@
 import { motion } from 'framer-motion';
-import { ASSETS } from '../assets';
+
 import { fadeUp } from '../lib/utils';
 import { Zap, ShieldAlert, Award } from 'lucide-react';
+import usabilityHuman from "./images/usability-human.png";
+import costEfficiency from "./images/cost-efficiency.png";
+import userSatisfaction from "./images/user-satisfaction.png";
+
+export const ASSETS = {
+  icons: {
+    usabilityHuman,
+    costEfficiency,
+    userSatisfaction,
+  },
+};
+
 
 export function SearchChanged() {
   const cards = [
     {
       title: 'Efisiensi Kognitif & Nilai Guna',
       kicker: 'Prinsip ISO 9241-11',
-      icon: ASSETS.icons.chatgpt,
+      icon: ASSETS.icons.usabilityHuman,
       badgeIcon: Zap,
       description:
         'Usability memastikan pengguna mencapai objektif mereka tanpa frustrasi. Antarmuka yang intuitif meminimalkan beban kognitif (cognitive load), sehingga pengguna dapat fokus pada substansi pekerjaan mereka.',
@@ -17,7 +29,7 @@ export function SearchChanged() {
     {
       title: 'Hukum Ekonomi Biaya 1 : 10 : 100',
       kicker: 'Efisiensi Anggaran & Waktu',
-      icon: ASSETS.icons.perplexity,
+      icon: ASSETS.icons.costEfficiency,
       badgeIcon: ShieldAlert,
       description:
         'Mendeteksi dan memperbaiki masalah usability pada fase analisis kebutuhan membutuhkan $1. Memperbaikinya saat pembuatan kode butuh $10. Namun memperbaikinya setelah produk dirilis dapat memakan biaya hingga $100.',
@@ -26,7 +38,7 @@ export function SearchChanged() {
     {
       title: 'Tingkat Adopsi & Kepuasan Pengguna',
       kicker: 'Keberlangsungan Produk',
-      icon: ASSETS.icons.google,
+      icon: ASSETS.icons.userSatisfaction,
       badgeIcon: Award,
       description:
         'Di era digital modern, toleransi pengguna terhadap antarmuka yang membingungkan sangat rendah. Usability yang tinggi secara langsung menaikkan retensi, menurunkan churn, dan menekan biaya tiket bantuan pengguna.',
@@ -47,14 +59,20 @@ export function SearchChanged() {
           </p>
           <h2
             className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-[-2px] text-white leading-[1.08] max-w-5xl mx-auto"
-            style={{ textWrap: 'balance' }}
+            style={{ textWrap: "balance" }}
           >
-            Pentingnya <span className="font-serif italic font-normal text-white">Usability</span>
+            Pentingnya{" "}
+            <span className="font-serif italic font-normal text-white">
+              Usability
+            </span>
           </h2>
 
           {/* Subtitle */}
           <p className="text-neutral-400 text-base md:text-lg max-w-2xl mx-auto mt-6 mb-24 leading-relaxed font-normal">
-            Usability (kegunaan) bukan sekadar polesan visual di akhir pengembangan, melainkan penentu mutlak apakah sebuah sistem perangkat lunak akan berhasil diadopsi atau ditinggalkan oleh penggunanya.
+            Usability memastikan sebuah sistem dapat digunakan dengan mudah,
+            efektif, efisien, dan nyaman oleh manusia. Bukan sekadar membuat
+            tampilan terlihat menarik, tetapi memastikan setiap interaksi terasa
+            jelas dan sesuai dengan kebutuhan pengguna
           </p>
         </motion.div>
 
@@ -63,9 +81,19 @@ export function SearchChanged() {
           {cards.map((card, index) => {
             const BadgeIcon = card.badgeIcon;
             const accentColors = [
-              { border: 'hover:border-amber-500/40', badge: 'bg-amber-500/20 text-amber-300 border-amber-500/30' },
-              { border: 'hover:border-emerald-500/40', badge: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' },
-              { border: 'hover:border-cyan-500/40', badge: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30' },
+              {
+                border: "hover:border-amber-500/40",
+                badge: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+              },
+              {
+                border: "hover:border-emerald-500/40",
+                badge:
+                  "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+              },
+              {
+                border: "hover:border-cyan-500/40",
+                badge: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
+              },
             ][index % 3];
 
             return (
@@ -73,7 +101,7 @@ export function SearchChanged() {
                 key={card.title}
                 {...fadeUp(0.15 * (index + 1))}
                 whileHover={{ y: -6 }}
-                transition={{ duration: 0.3, ease: 'easeOut' }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
                 className={`liquid-glass rounded-2xl p-8 flex flex-col items-center text-center group border border-neutral-900 ${accentColors.border} transition-all duration-300`}
               >
                 {/* 200x200 Centered Icon Container in Full Natural Color */}
@@ -84,7 +112,9 @@ export function SearchChanged() {
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className={`absolute top-3 right-3 p-1.5 rounded-full backdrop-blur-sm border ${accentColors.badge}`}>
+                  <div
+                    className={`absolute top-3 right-3 p-1.5 rounded-full backdrop-blur-sm border ${accentColors.badge}`}
+                  >
                     <BadgeIcon className="w-3.5 h-3.5" />
                   </div>
                 </div>
@@ -116,7 +146,8 @@ export function SearchChanged() {
         {/* Bottom Tagline */}
         <motion.div {...fadeUp(0.4)} className="text-center">
           <p className="text-neutral-400 text-sm md:text-base tracking-wide font-serif italic max-w-xl mx-auto">
-            &ldquo;Sistem dengan fitur terlengkap sekalipun tidak bernilai jika pengguna gagal memahami cara memakainya.&rdquo;
+            &ldquo;Sistem dengan fitur terlengkap sekalipun tidak bernilai jika
+            pengguna gagal memahami cara memakainya.&rdquo;
           </p>
         </motion.div>
       </div>
